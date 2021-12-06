@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Success</title>
+        <link href="/static/login.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <p class="success-message">Login success.</p>
+            <p>Username: {{ username }}</p>
+            <p>Auth level: {{ auth }}</p>
+            <p>Menu</p>
+            <ul>
+                <li><a href="/user_management">User management.</a></li>
+                <li><a href="/systems_management">Systems management.</a></li>
+                <li><a href="/systems_overview">Systems overview.</a></li>
+                <li><a href="/source_code">Source code overview.</a></li>
+                <li><a href="/time_reporting">Time reporting.</a></li>
+                <li><a href="/it_help">IT help.</a></li>
+            </ul>
+        </main>
+    </body>
+</html>

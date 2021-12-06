@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@200;500;700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans";
+}
+
+#form-container {
+    color: black;
+    border: 1px solid black;
+    padding: 2%;
+}
+
+input[type=submit] {
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 1s color ease-out, 1s background-color ease-out;
+}
+
+input[type=submit]:hover {
+    color: black;
+    background-color: white;
+}
+
+input[type=text] {
+    display: block;
+    padding: 5%;
+}
+
+input[type=password] {
+    display: block;
+    padding: 5%;
+}
+
+#failure-message {
+    color: red;
+}
+
+#random_pass {
+    display: none;
+    color: green;
+}
+
+#random_pass_reveal {
+    cursor: pointer;
+}
+
+.success-message {
+    color: green;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Secure Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="form-container">
+            <h2>Secure Login</h2>
+            <form id="login-form" method="POST" action="index.html">
+                <p>
+                    <label for="usernameInput" class="formLabel">Username: </label>
+                    <input type="text" name="usernameInput" class="formTextInput" id="usernameInput">
+                </p>
+                <p>
+                    <label for="passwordInput" class="formLabel">Password: </label>
+                    <input type="password" name="passwordInput" class="formTextInput" id="passwordInput">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+            <p>
+                Don't have an account? <a href="/create_account.html">Sign up.</a>
+            </p>
+            <p class="success-message">
+                Account successfully created!
+            </p>
+        </div>
+    </body>
+</html>

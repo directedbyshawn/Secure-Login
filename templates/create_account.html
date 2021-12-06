@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/styles.css" type="text/css" rel="stylesheet">
+        <script src="/static/pass.js"></script>
+    </head>
+    <body>
+        <div id="form-container">
+            <h2>Create Account</h2>
+            <form id="login-form" method="POST" action="create_account.html">
+                <p>
+                    Password must contain the following:
+                </p>
+                <ul>
+                    <li>Min 8 characters.</li>
+                    <li>Max 25 characters.</li>
+                    <li>One uppercase letter.</li>
+                    <li>One lowercase letter.</li>
+                    <li>One number.</li>
+                    <li>One special character.</li>
+                </ul>
+                <p id="random_pass">{{ random_pass }}</p>
+                <p id="random_pass_reveal">Click here for random pass.</p>
+
+                <p>
+                    <label for="usernameInput" class="formLabel">Username: </label>
+                    <input type="text" name="usernameInput" class="formTextInput" id="usernameInput">
+                </p>
+                <p>
+                    <label for="passwordInput" class="formLabel">Password: </label>
+                    <input type="password" name="passwordInput" class="formTextInput" id="passwordInput">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

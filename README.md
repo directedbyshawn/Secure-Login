@@ -16,6 +16,6 @@ Users are permanentely locked out after three incorrect login attempts. If they 
 The purpose of this project is not to actually create a purposeful service, but to demonstrate an understanding of proper technique for creating secure web services. The class I created this for is a cybersecurity class, so the site is meant to be resistant to SQL injection attacks, as well as any sort of attack on the integrity of the database.
 
 ## Instructions
-To test my work, install from `requirements.csv`. Only flask will be installed, every other module is included with python. You will need to run the setup.py script first to create the
-database. After that, you can run the app using start.py. To login, check `app/test_credentials.txt` for some pre created credentials. I have not currently added a feature to log out as this project
+To test my work, install from `requirements.txt`. Only flask will be installed, every other module is included with python. You will need to run the setup.py script first to create the
+database. After that, you can run the app using start.py. To login, check `app/test_credentials.csv` for some pre created credentials. I have not currently added a feature to log out as this project
 was created solely for security demonstration purposes. If you would like to test the different pre created credentials, you must restart the dev server.

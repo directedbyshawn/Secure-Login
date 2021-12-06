@@ -4,5 +4,5 @@
 
 '''
 
-DB_FILE = './instance/var/db/test.db'
+DB_FILE = 'app/instance/var/db/users.db'
 display = {}

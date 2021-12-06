@@ -6,14 +6,16 @@
 
 import os 
 
-from db import *
+import app.db as db
 
-DIRS = ['instance/var/db',
-        'instance/var/log',
-        'instance/var/tmp',
-        'instance/var/run']
+DIRS = ['app/instance/var/db',
+        'app/instance/var/log',
+        'app/instance/var/tmp',
+        'app/instance/var/run']
 
 if __name__ == '__main__':
+
+    os.system('cls')
 
     print('Creating directories...')
     for d in DIRS:
@@ -23,6 +25,7 @@ if __name__ == '__main__':
             pass
 
     print('Initializing database...')
-    create_db()
-
-    print('Done!')
+    if (db.create_db()):
+        print('Database created!')
+    else:
+        print("ERROR: Could not create database")

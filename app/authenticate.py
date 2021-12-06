@@ -4,7 +4,8 @@
 
 '''
 
-import random, hashlib, os, base64, db
+import random, hashlib
+from .db import retrieve_accounts
 
 lower_case = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 upper_case = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -16,7 +17,7 @@ def authenticate(username, password):
     ''' Authenticates user upon login '''
     
     # retrieves users from database
-    users = db.retrieve_accounts()
+    users = retrieve_accounts()
 
     stored_username = ''
     stored_password = ''
@@ -60,7 +61,7 @@ def verify_new_account(username, password):
     global lower_case, upper_case, nums, special
 
     # retrieves all users from db and makes a list of all usernames
-    users = db.retrieve_accounts()
+    users = retrieve_accounts()
     taken_usernames = []
     for accounts in users:
         taken_usernames.append(accounts[0])
@@ -121,18 +122,3 @@ def random_password():
         password += char 
 
     return password
-
-def salted_pass(password):
-    
-    ''' Returns hashed and salted password '''
-
-    # generates salt
-    token = os.urandom(30)
-    salt = base64.b64encode(token).decode('utf-8')
-
-    hashable = salt + password  # concatenate salt and plain_text
-    hashable = hashable.encode('utf-8')  # convert to bytes
-    this_hash = hashlib.sha1(hashable).hexdigest()  # hash w/ SHA-1 and hexdigest
-    return salt + this_hash
-
-

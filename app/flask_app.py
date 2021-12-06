@@ -4,16 +4,12 @@
 
 '''
 
-import time, random, os
-import config
-from config import display
-from db import *
-from flask import Flask, render_template, request, flash, redirect, url_for
-from authenticate import authenticate, verify_new_account, random_password
+from .config import display
+from .db import *
+from flask import Flask, render_template, request, redirect, url_for
+from .authenticate import authenticate, verify_new_account, random_password
 
 app = Flask(__name__, static_folder='instance/static')
-
-app.config.from_object('config')
 
 logged_in = False
 login_attempts = 1

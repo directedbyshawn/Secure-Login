@@ -3,8 +3,11 @@
 <img alt="login screen" src="https://srodgers.w3.uvm.edu/cs166/login.png" style="width: 500px; margin: 30px;">
 
 ## Description
-This is a secure login system I created for a class project. Users are able to create an account, login, and then access a few menu options based on their authentication level. `Level 1` is the highest, and users with level 1
-authentication can access any option from the directory. `Level 2` users can access a few special options, but not all of them. `Level 3` users can only access 
+This is a secure login system I created for a class project. Users are able to create an account, login, and then access a few menu options based on their authentication level. 
+- `Level 1` is the highest, and users with level 1
+authentication can access any option from the directory.  
+- `Level 2` users can access a few special options, but not all of them.  
+- `Level 3` users can only access  
 the most basic options. I have created three accounts and added them to the database, the logins can be found in test_credentials.txt. I created a level 1, 2, 
 and 3 accounts so that you can see that the authentication level does affect user access. All users created from the create page are given level 3 accces which 
 is the lowest. 
